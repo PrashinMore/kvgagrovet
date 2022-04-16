@@ -266,17 +266,17 @@
             <div class="col-md-5 column">
                 <div >
                             
-<div class="product-info">
+<div id="product-info">
 
 </div>    
-<h2 style="color: #796e65;"><small>"Fruits of the World"</small>Verita</h2>
+<!-- <h2 style="color: #796e65;"><small>"Fruits of the World"</small>Verita</h2>
 <p>Founded 25 years ago as the first brand of Ideal Tarım, Verita prides itself on living by its “Fruits of the World" motto, bringing the highest quality and most delicious fruits from 44 countries to its consumers.</p>
 <p>Manufactured, shipped, and supplied in accordance with global quality standards, Verita branded products are available for sale every day of the year in national chain markets, local markets, greengrocers, and fruit and vegetable wholesale market halls. The Verita Product Catalogue is as follows.</p>
 
 
                             
     
-    <img class="img-responsive" src="media/1758/verita-tum-urunler.jpg" alt="">
+    <img class="img-responsive" src="media/1758/verita-tum-urunler.jpg" alt=""> -->
 
 
                             
@@ -284,9 +284,9 @@
 
     
         <a class="btn btn-default my-xs py-xs"
-   href="media/2835/verita_products_and_availability_broshure.pdf"
+   href="media/2835/FINAL_KVG_AGROVET_CATLOG.pdf"
    target="_blank">
-    <i class="fas fa-download btn-icon-left"></i> Verita Product Catalogue
+    <i class="fas fa-download btn-icon-left"></i> Our Product Catalogue
 </a>
     
 
@@ -551,16 +551,39 @@
     <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.min.js"></script>
     
     <script>
+            const productInfo = document.getElementById("product-info");
+    var products = [
+        {
+            name: "onion",
+            title: "Quality and Affordable",
+            img: "media/1689/verita-ananas.png",
+            description: "India is the second largest anion growing country in the world. Maharashtra state rank first in overall production with covering almost 1/3 of total production in India, Indian onions are popular for their pungency. They are available through the year. it has got two crop cycles, first harvesting starts in November to January and the second harvesting from January to May We are counted as one of the topmost Red Onion Exporters from India. We procure Indian Red Onion from well-known agriculturists and framers that assure our customers of oloauthenticity. Uniform in size, our Fresh Red Onion add rich flavor and texture to cuisines from all over the world. The quantity and packing is as per customer specification." 
+        }
+    ]
         $("nav.navbar-default").affix({
             offset: {
                 top: $(".navbar-top").height()
             }
         });
         $(document).ready(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('product');
+
             $(".section-image").each(function () {
                 var topHeight = $(this).parents().eq(2).find(".section-title").outerHeight() + 6;
                 $(this).css({ "margin-top": topHeight });
             });
+            console.log(products)
+            console.log(productName)
+            let x = products.filter((a)=>{if(a.name==`${productName}`){return a}});
+            let productObj = x[0]
+            console.log("product info bitch",x)
+            productInfo.innerHTML = `
+    <h2 style="color: #796e65;"><small>${productObj.title}</small>${productObj.name}</h2>
+<p>${productObj.description}</p>
+
+    <img class="img-responsive" src="${productObj.img}" alt="">
+    `
         });
     </script>
     
@@ -571,8 +594,6 @@
     if (typeof umbracoFormsCollection === 'undefined') var umbracoFormsCollection = [];
     umbracoFormsCollection.push({"formId":"c63b9c4b6b724284b623a4776535040c","fieldSetConditions":{},"fieldConditions":{},"recordValues":{}});
 </script>
-
-<script></script>
 
 </body>
 </html>
