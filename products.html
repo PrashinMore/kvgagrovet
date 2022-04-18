@@ -464,13 +464,13 @@
              var form = "";
                      $(document)
                          .ready(function() {
-                             //Intercept Submit button in order to make ajax call instead of a postback
-                             //form = $("input[name=__RequestVerificationToken]").eq($("input[name=__RequestVerificationToken]").length - 1).parent()
+                             //Intercept Submit button in order to make ajax call instead of a postback nddlj
+                             //form = $("input[name=__RequestVerificationToken]").eq($("input[name=__RequestVerificationToken]").length - 1).parent()asd
                              form = $("#ebultenform").parent();
                              form.preventDoubleSubmission();
                          });
              
-             // jQuery plugin to prevent double submission of forms
+             // jQuery plugin to prevent double submission of formsasd
                  jQuery.fn.preventDoubleSubmission = function () {
                      $(this).on('submit', function (e) {
                          e.preventDefault();
