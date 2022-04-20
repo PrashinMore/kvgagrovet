@@ -10083,17 +10083,18 @@ header .page-title,
 /* BRAND COMPOTENTS */
 .follow-brand-links {
     padding: 0;
+    float: left;
     margin: 0;
-    overflow: auto;
+    /* overflow: auto; */
+    /* width: 30%; */
 }
 
     .follow-brand-links li {
         list-style-type: none;
-        float: left;
+        /* float: left; */
         color: #796E65;
         margin: 6px;
         text-align: center;
-        line-height: 0;
     }
 
         .follow-brand-links li > a {
