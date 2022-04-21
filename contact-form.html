@@ -813,6 +813,10 @@ data-val="true"
                                  </div>
                              </div>
  <script type="text/javascript">
+    var SPREADSHEET_ID = '17CHOXPGCiasVHrNB5kj4-DlNzIMvXvoAjsa3Y3idxGo';
+    var CLIENT_ID = '923070975685-hk877q0n2an1bmq5ipivhilougrpn6rj.apps.googleusercontent.com';
+    var API_KEY = 'AIzaSyC9mHcLz3j_V_68eG8BIBNHEjxMgiNGuZ8';
+    var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
  var form = "";
          $(document)
              .ready(function() {
@@ -820,6 +824,18 @@ data-val="true"
                  //form = $("input[name=__RequestVerificationToken]").eq($("input[name=__RequestVerificationToken]").length - 1).parent()
                  form = $("#ebultenform").parent();
                  form.preventDoubleSubmission();
+                 // 1. Load the JavaScript client library.
+gapi.load('client', init);
+
+async function init() {
+  // 2. Initialize the JavaScript client library.
+  await gapi.client.init({
+    discoveryDocs: ['https://discovery.googleapis.com/$discovery/rest']
+  });
+  start();
+}
+
+                 
              });
  
  // jQuery plugin to prevent double submission of forms
@@ -828,28 +844,41 @@ data-val="true"
              e.preventDefault();
  
              var $form = $(this);
- 
-             if ($form.data('submitted') === true) {
-                 // Previously submitted - don't submit again siddksbnnn
-             } else {
-                 if ($form.valid()) {
-                     // Mark it so that the nexst submit can be ignoredaka
-                     $form.data('submitted', true);
- 
-                     // Make ajax call form submissionakn
-                     $.ajax({
-                         url: $form.attr('action'),
-                         type: 'POST',
-                         cache: false,
-                         data: $form.serialize(),
-                         success: function (result) {
-                             var thankYouMessage = $(result).find('.umbraco-forms-submitmessage');
-                             form.html(thankYouMessage);
- 
-                         }
-                     });
-                 }
+
+             var params = {
+                 spreadsheetId: SPREADSHEET_ID,
+                 range: 'Sheet1',
+                 valueInputOption: 'RAW',
+                 insertDataOption: 'INSERT_ROWS'
              }
+
+             var valueRangeBody = {
+                 'majorDimension': 'ROWS',
+                 'values': [$form.serialize()]
+             }
+
+ 
+            //  if ($form.data('submitted') === true) {
+            //      // Previously submitted - don't submit again siddksbnnn
+            //  } else {
+            //      if ($form.valid()) {
+            //          // Mark it so that the nexst submit can be ignoredaka
+            //          $form.data('submitted', true);
+ 
+            //          // Make ajax call form submissionakn
+            //          $.ajax({
+            //              url: $form.attr('action'),
+            //              type: 'POST',
+            //              cache: false,
+            //              data: $form.serialize(),
+            //              success: function (result) {
+            //                  var thankYouMessage = $(result).find('.umbraco-forms-submitmessage');
+            //                  form.html(thankYouMessage);
+ 
+            //              }
+            //          });
+            //      }
+            //  }
          });
  
          // Keep chainabilityjdhiu

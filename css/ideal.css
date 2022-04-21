@@ -6,14 +6,21 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    box-sizing: border-box;
 }
 
 article,
@@ -10098,17 +10105,14 @@ header .page-title,
     }
 
         .follow-brand-links li > a {
-            padding: 12px;
             display: inline-block;
             font-size: 21px;
             width: 48px;
-            height: 48px;
             background: #dddad7;
             color: #796E65;
         }
 
             .follow-brand-links li > a:hover, .follow-brand-links li > a:active, .follow-brand-links li > a:focus {
-                background: #796E65;
                 color: #fff;
                 text-decoration: none;
             }
@@ -10971,14 +10975,15 @@ footer {
     position: relative;
 }
 
-.gmaps-container {
-    height: 462px;
-}
+/* .gmaps-container {
+    height: 280px;
+} */
 
     .gmaps-container #map {
-        width: 100%;
-        height: 100%;
-        height: 462px;
+        /* width: 100%;
+        height: 100%; */
+        height: 130px;
+        width: 340px;
         background: #6d6762;
     }
 
