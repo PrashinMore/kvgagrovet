@@ -270,7 +270,7 @@
 
     <header class="">
         <div class="header-image">
-            <img src='images/falling-fruits-berries-banner.jpg?center=0.63800904977375561,0.41&amp;mode=crop&amp;width=1903&amp;height=610&amp;rnd=132267797630000000'
+            <img src='images/group-fresh-vegetables-fruits.jpg?center=0.63800904977375561,0.41&amp;mode=crop&amp;width=1903&amp;height=610&amp;rnd=132267797630000000'
                  class="header-bg" />
             <div class="container page-title">
                 <h1><small>We Carry Ideal's Standards</small>To All Of The World</h1>
@@ -533,7 +533,7 @@ Responsible Production</span>
                                  <a href="mailto:info@kvgagrovet.com">Info@Kvgagrovet.Com</a>
                              </span>
                          </div>
-                         <div class="col-md-12">
+                         <!-- <div class="col-md-12">
                              <a class="text-small"
                                 style="font-size:15px"
                                 href="/en/legal/ideal-privacy-policy">
@@ -543,48 +543,50 @@ Responsible Production</span>
                              <small>
                                  © 2022 KVG Agrovet Private Limited
                              </small>
-                         </div>
+                         </div> -->
                      </div>
                  </div>
                  <div class="col-md-7">
                      <div class="row">
                          <div class="col-md-6">
+                             <strong> 
+                                 FOLLOW US
+                             </strong>
+                         </div>
+                         <div class="col-md-6">
+                             <strong> 
+                                 MAP
+                             </strong>
                          </div>
                          <div class="col-md-6">
                              <div class="container">
                                  <div class="row">
-                                     <div class="col-md-12">
+                                     <div class="col-md-12" style="padding-left: 0;">
                                          <div class="follow-brand">
                                              <ul class="follow-brand-links">
                              
                                                      <li>
-                                                         <a href="https://www.facebook.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook" data-original-title="Facebook">
-                                                            <i style="display: inline; padding-right: 10px;" class="fab fa-facebook-f"></i>Facebook
+                                                         <a style="display: flex;
+                                                         align-items: center;" href="https://www.facebook.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook" data-original-title="Facebook">
+                                                            <i style="display: inline; padding-right: 10px; font-size: 15px;" class="fab fa-facebook-f"></i><strong style="font-size: 16px;">Facebook</strong>
                                                          </a>
                                                      </li>
                                                      <li>
-                                                         <a href="https://www.instagram.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram" data-original-title="Instagram">
-                                                             <i style="display: inline; padding-right: 10px;" class="fab fa-instagram"></i>Instagram
+                                                         <a style="display: flex;
+                                                         align-items: center;"href="https://www.instagram.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram" data-original-title="Instagram">
+                                                             <i style="display: inline; padding-right: 10px; font-size: 15px;" class="fab fa-instagram"></i><strong style="font-size: 16px;">Instagram</strong>
                                                          </a>
                                                      </li>
                                                      <li>
-                                                         <a href="https://www.youtube.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Youtube" data-original-title="Youtube">
-                                                             <i style="display: inline; padding-right: 10px;" class="fab fa-youtube"></i>Youtube
+                                                         <a style="display: flex;
+                                                         align-items: center;"href="https://www.youtube.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Youtube" data-original-title="Youtube">
+                                                             <i style="display: inline; padding-right: 10px; font-size: 15px;" class="fab fa-linkedin"></i><strong style="font-size: 16px;">Linkedin</strong>
                                                          </a>
                                                      </li>
                                                      <li>
-                                                         <a href="https://twitter.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter" data-original-title="Twitter">
-                                                             <i style="display: inline; padding-right: 10px;" class="fab fa-twitter"></i>Twitter
-                                                         </a>
-                                                     </li>
-                                                     <li>
-                                                         <a href="mailto:info@kvgagrovet.com" target="_blank" data-toggle="tooltip" data-placement="top" title="E-Posta" data-original-title="E-Posta">
-                                                             <i style="display: inline; padding-right: 10px;" class="fas fa-envelope"></i>Email
-                                                         </a>
-                                                     </li>
-                                                     <li>
-                                                         <a href="http://kvgagrovet.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Verita Web Sitesi" data-original-title="Verita Web Sitesi">
-                                                             <i style="display: inline; padding-right: 10px;" class="fas fa-external-link-alt"></i>Website
+                                                         <a style="display: flex;
+                                                         align-items: center;" href="https://twitter.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter" data-original-title="Twitter">
+                                                             <i style="display: inline; padding-right: 10px; font-size: 15px;" class="fab fa-twitter"></i><strong style="font-size: 16px;">Twitter</strong>
                                                          </a>
                                                      </li>
                                              </ul>
@@ -602,7 +604,7 @@ Responsible Production</span>
                  form.preventDoubleSubmission();
              });
  
- // jQuery plugin to prevent double submission of forms ahaj
+ // jQuery plugin to prevent double submission of forms
      jQuery.fn.preventDoubleSubmission = function () {
          $(this).on('submit', function (e) {
              e.preventDefault();
@@ -648,11 +650,27 @@ Responsible Production</span>
  
  
  <script src='./App_Plugins/UmbracoForms/Assets/Themes/Default/umbracoforms.js' defer='defer' ></script><link rel='stylesheet' href='app_plugins/umbracoforms/assets/defaultform.css' />    </div>
+ <div class="col-md-6">
+     <div class="container-fluid">
+     <div class="row">
+         <div class="col-md-12" style="padding-left: 0;">
+             <div class="gmaps-container">
+                 <div id="map">
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ </div>
                          </div>
                      </div>
                  </div>
              </div>
          </div>
+ 
+         <small style="position: absolute; left: 41%">
+             © 2022 KVG Agrovet Private Limited
+         </small>
       
      </footer>
 
@@ -685,6 +703,61 @@ Responsible Production</span>
     if (typeof umbracoFormsCollection === 'undefined') var umbracoFormsCollection = [];
     umbracoFormsCollection.push({"formId":"c63b9c4b6b724284b623a4776535040c","fieldSetConditions":{},"fieldConditions":{},"recordValues":{}});
 </script>
+
+<script>
+    // Initialize and mnjadd tsdkjhe map bjhs
+    function initMap() {
+        var zoomLevel =3;
+        // if(($(window).width() < 400)){
+        //             zoomLevel= 1.3;
+        // }
+        // else if(($(window).width() < 500)){
+        //             zoomLevel= 1.5;
+        // }
+        // else if(($(window).width() < 600)){
+        //             zoomLevel= 1.7;
+        // }
+        // else if(($(window).width() < 900)){
+        //             zoomLevel= 2;
+        // }
+        // else if(($(window).width() < 1200)){
+        //             zoomLevel= 2.5;
+        // }
+console.log("zoomlevel"+zoomLevel);
+        var locations = [
+          ['KVG Agrovet Pvt. Ltd.',18.3793911,73.8715594,17]
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: zoomLevel,
+            center: new google.maps.LatLng(18.3793911, 73.8715594,17),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+
+    }
+</script>
+<script async
+defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc1MTWtPFsVjzWW32RbvFhFppfICel0jg&amp;callback=initMap"
+type="text/javascript"></script>
 
 
 </body>
