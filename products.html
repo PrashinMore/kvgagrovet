@@ -586,20 +586,20 @@
             img: "images/Green-chilli.jpg",
             description: "Chillies are the life and soul of a hearty Indian meal. You don't necessarily have to overdo it until smoke comes out of your ears, but without a touch of chilli, dishes seem incomplete. We can't think of Indian cooking without a dash of green chillies. Slit, sliced, chopped or diced, we just have to add a few green chillies add that tang to our food. A green chilli is an important star in Indian cooking. This spice is grown throughout the year and so there is no scarcity and a good quantity is exported" 
         },
-        {
-            name: "Lemon",
-            origin: "India",
-            size: "400gm to 600gm",
-            packaging: "13kg bag 25 cs/per 520gm average size, 2100 bag, 40ft Container",
-            types: "PP bags",
-            quantity: "FCL Load",
-            dispatchPort: "COCHIN/JNPT Port",
-            terms: "Ex work, FOB, CIF and CNF as per requirement.",
-            url: "lemon",
-            title: "Fruits Of The World",
-            img: "images/lemon.jpg",
-            description: "Lemons are high in vitamin C, fiber, and various beneficial plant compounds. These nutrients are responsible for several health benefits. In fact lemons may support heart health, weight control, and digestive health." 
-        },
+        // {
+        //     name: "Lemon",
+        //     origin: "India",
+        //     size: "400gm to 600gm",
+        //     packaging: "13kg bag 25 cs/per 520gm average size, 2100 bag, 40ft Container",
+        //     types: "PP bags",
+        //     quantity: "FCL Load",
+        //     dispatchPort: "COCHIN/JNPT Port",
+        //     terms: "Ex work, FOB, CIF and CNF as per requirement.",
+        //     url: "lemon",
+        //     title: "Fruits Of The World",
+        //     img: "images/lemon.jpg",
+        //     description: "Lemons are high in vitamin C, fiber, and various beneficial plant compounds. These nutrients are responsible for several health benefits. In fact lemons may support heart health, weight control, and digestive health." 
+        // },
         {
             name: "Tomato",
             origin: "India",
@@ -655,7 +655,7 @@
             terms: "Ex work, FOB, CIF and CNF as per requirement.",
             url: "banana",
             title: "Fruits Of The World",
-            img: "images/banana_prod.png",
+            img: "images/banana.jpg",
             description: "Cavendish Banana is the most accepted international variety. Indian Banana Grand Naine (G9) is a tall statured plant and a high yielding variety grown for commercial purpose. The plant grows to a height of about 7 feet and bunches can be harvested in about a year time from the date of plantation adopting latest best agricultural practices like Drip Irrigation, Nutrient and Pest Management." 
         },
         {
@@ -759,6 +759,22 @@
             title: "Fruits Of The World",
             img: "media/2109/ekopita-avokado.png",
             description: "Suran, or Elephant yam, is the edible bulb or corm of a very unique looking single-stalked, flowering plant. After a year underground, the corm develops a unique flower with a central flowering stalk encircled by one large, maroon petal and topped with a similarly colored bulbou nob. The stalk can reach up to one meter in height. Once the flower dies, the com produces one or two tall, green and white spotted stalks topped with several lealy branches. Suran are unearthed once the leaf stalk has died away. The root is round and compressed with a depression on top where the stalk was removed. When harvested, Suran can measure roughly 30 centimeters wide and 20 centimeters tall. A single Suran can weigh as much as 8 pounds, with some tubers weighing almost 30 pounds. Uncultivated Suran may have smaller cormlets attached and may have rooflets growing from its rough surface. The dark brown, almost black skin of the Elephant yam is bark-like but thin enough to be peeled. Its beige colored flesh has a texture like that of a sweet potato, crisp and firm. Suran has an earthy flavor that can also be nutty with a minimal amount of sweetness." 
+        },
+        {
+            name: "Lemon",
+            origin: "India",
+            variety: "Sweet Lime, Lemon",
+            size: "--",
+            packaging: "As per customer requirement",
+            types: "--",
+            quantity: "--",
+            dispatchPort: "--",
+            terms: "--",
+            url: "lemon",
+            title: "Fruits Of The World",
+            img: "images/lemon.jpg",
+            availability: "Around the year",
+            description: "Lemons are high in vitamin C. fiber, and various beneficial plant compounds. These nutrients are responsible for several health benefits. In fact lemons may support heart health, weight control and digestive health." 
         }
     ]
         // $("nav.navbar-default").affix({jbfeww;l;
@@ -796,16 +812,16 @@
             <div class="row clearfix">
                 <div class="col-md-5 column">
                     <div > 
-    <h2 style="color: #796e65;"><small>${productObj.title}</small>${productObj.name}</h2>
+    <h2 style="color: #796e65;">${productObj.name}</h2>
     <p>${productObj.description}</p>
     
     <br>
     <span><h4 style="display: inline">Origin:</h4> ${productObj.origin}</span><br>
+    <span><h4 style="display: inline">Variety:</h4> ${productObj.variety || "--"}</span><br>
     <span><h4 style="display: inline">Size:</h4> ${productObj.size}</span><br>
     <span><h4 style="display: inline">Packaging:</h4> ${productObj.packaging}</span><br>
     <span><h4 style="display: inline">Types:</h4> ${productObj.types}</span><br>
     <span><h4 style="display: inline">Quantity:</h4> ${productObj.quantity}</span><br>
-    <span><h4 style="display: inline">Port of Dispatch:</h4> ${productObj.dispatchPort}</span><br>
     <span><h4 style="display: inline">Terms Of Delivery:</h4> ${productObj.terms}</span><br>
 
     

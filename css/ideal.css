@@ -9582,7 +9582,7 @@ section,
     }
 
     .card .card-block {
-        padding: 24px;
+        padding: 18px;
     }
 
         .card .card-block .card-block {
@@ -12142,7 +12142,7 @@ span.mail-link > a {
     -ms-flex-direction: row;
     flex-direction: row;
     text-align: left;
-    top: 108px;
+    top: 111px;
 }
 
 @media screen and (max-width: 767px) {
@@ -12162,8 +12162,8 @@ span.mail-link > a {
     left: 0;
 }
 
-.tree-model:nth-child(odd) {
-    border-right: 2px solid #707070;
+.tree-model:nth-child(even) {
+    border-left: 2px solid #707070;
 }
 
 @media screen and (max-width: 767px) {
