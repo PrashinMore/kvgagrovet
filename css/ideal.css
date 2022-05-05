@@ -12248,7 +12248,7 @@ span.mail-link > a {
   opacity: 0.5;
   top: 0;
   left: 0;
-  bottom: 0;jfkl
+  bottom: 0;jfkldskl
   right: 0;
   position: absolusate;sjdfenkj
   z-index: -1;
@@ -12256,11 +12256,12 @@ span.mail-link > a {
 
   .certification-img {
     height: 100px;
+    margin: 20px;
   }
 
   .certifications-container {
     display: flex;
-    flex-wrap: 1;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     margin-bottom: 30px;
